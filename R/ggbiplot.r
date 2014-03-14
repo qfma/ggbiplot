@@ -49,7 +49,9 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
                       obs.scale = 1 - scale, var.scale = scale, 
                       groups = NULL, ellipse = FALSE, ellipse.prob = 0.68, 
                       labels = NULL, labels.size = 3, alpha = 1, 
-                      var.axes = TRUE, 
+                      var.axes = TRUE,
+                      varname.colour = "darkred",
+                      varname.family = "Serif"
                       circle = FALSE, circle.prob = 0.69, 
                       varname.size = 3, varname.adjust = 1.5, 
                       varname.abbrev = FALSE, ...)
@@ -209,7 +211,8 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
     geom_text(data = df.v, 
               aes(label = varname, x = xvar, y = yvar, 
                   angle = angle, hjust = hjust), 
-              color = 'darkred', size = varname.size)
+              color = varname.colour, size = varname.size, 
+              family = varname.family)
   }
   # Change the name of the legend for groups
   # if(!is.null(groups)) {
