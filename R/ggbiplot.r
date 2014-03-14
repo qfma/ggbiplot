@@ -37,6 +37,9 @@
 #' @param varname.size    size of the text for variable names
 #' @param varname.adjust  adjustment factor the placement of the variable names, >= 1 means farther from the arrow
 #' @param varname.abbrev  whether or not to abbreviate the variable names
+#' @param varname.colour  the colour of the variable names
+#' @param varname.family  the font family to use for the variable names
+#' @param arrows.colour   the colour of the arrows drawn
 #'
 #' @return                a ggplot2 plot
 #' @export
